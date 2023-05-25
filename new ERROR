@@ -1,0 +1,10 @@
+
+training_set = train_datagen.flow_from_directory('Datasets/Train',                   ---------->>>> ISKO YAHA DIRECTORY ADRSS CHAHIYE HMNE JO test AUR train bnaye hai 
+                                                 target_size = (224, 224),                          vo dataframes hai
+                                                 batch_size = 32,
+                                                 class_mode = 'categorical')
+
+test_set = test_datagen.flow_from_directory('Datasets/Test',
+                                            target_size = (224, 224),
+                                            batch_size = 32,
+                                            class_mode = 'categorical')
