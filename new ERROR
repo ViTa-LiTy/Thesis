@@ -8,3 +8,8 @@ test_set = test_datagen.flow_from_directory('Datasets/Test',
                                             target_size = (224, 224),
                                             batch_size = 32,
                                             class_mode = 'categorical')
+                                            
+                                            
+                                            
+                                           
+                  TypeError: listdir: path should be string, bytes, os.PathLike or None, not DataFrame
