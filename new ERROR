@@ -1,6 +1,0 @@
-
-PS D:\Study\Thesis\Code> & C:/Users/shiva/.conda/envs/tf/python.exe d:/Study/Thesis/Code/2nd_del.py
-Traceback (most recent call last):
-  File "d:\Study\Thesis\Code\2nd_del.py", line 36, in <module>
-  File "C:\Users\shiva\.conda\envs\tf\lib\site-packages\PIL\Image.py", line 3236, in open
-OSError: [Errno 24] Too many open files: 'D:/Study/Thesis/EyePacs dataset/eyepacs_preprocess\\19270_left.jpeg
