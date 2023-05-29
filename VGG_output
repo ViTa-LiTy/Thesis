@@ -1,0 +1,53 @@
+PS D:\Study\Thesis\Code> & C:/Users/shiva/.conda/envs/tf/python.exe d:/Study/Thesis/Code/6th_VGG.py
+2023-05-29 21:57:07.426640: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-05-29 21:57:09.959032: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1616] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 2777 MB memory:  -> device: 0, name: NVIDIA GeForce GTX 1050 Ti, pci bus id: 0000:01:00.0, compute capability: 6.1
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ vgg16 (Functional)          (None, 4, 4, 512)         14714688  
+
+ global_average_pooling2d (G  (None, 512)              0
+ lobalAveragePooling2D)
+
+ dense (Dense)               (None, 5)                 2565
+
+=================================================================
+Total params: 14,717,253
+Trainable params: 2,565
+Non-trainable params: 14,714,688
+_________________________________________________________________
+2023-05-29 21:57:10.938544: W tensorflow/core/framework/cpu_allocator_impl.cc:82] Allocation of 1104347136 exceeds 10% of free system memory.
+Epoch 1/10
+2023-05-29 21:57:14.057387: I tensorflow/stream_executor/cuda/cuda_dnn.cc:384] Loaded cuDNN version 8600
+2023-05-29 21:57:17.034703: W tensorflow/core/common_runtime/bfc_allocator.cc:290] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.06GiB with freed_by_count=0. The caller indicates that this is not a failure, but this may mean that there could be performance gains if more memory were available.
+2023-05-29 21:57:17.162716: W tensorflow/core/common_runtime/bfc_allocator.cc:290] Allocator (GPU_0_bfc) ran out of memory trying to allocate 1.04GiB with freed_by_count=0. The caller indicates that this is not a failure, but this may mean that there could be performance gains if more memory were available.
+2023-05-29 21:57:17.265891: W tensorflow/core/common_runtime/bfc_allocator.cc:290] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.06GiB with freed_by_count=0. The caller indicates that this is not a failure, but this may mean that there could be performance gains if more memory were available.
+2023-05-29 21:57:17.390466: W tensorflow/core/common_runtime/bfc_allocator.cc:290] Allocator (GPU_0_bfc) ran out of memory trying to allocate 1.05GiB with freed_by_count=0. The caller indicates that this is not a failure, but this may mean that there could be performance gains if more memory were available.
+2023-05-29 21:57:17.508662: W tensorflow/core/common_runtime/bfc_allocator.cc:290] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.09GiB with freed_by_count=0. The caller indicates that this is not a failure, but this may mean that there could be performance gains if more memory were available.
+2023-05-29 21:57:17.660701: W tensorflow/core/common_runtime/bfc_allocator.cc:290] Allocator (GPU_0_bfc) ran out of memory trying to allocate 1.08GiB with freed_by_count=0. The caller indicates that this is not a failure, but this may mean that there could be performance gains if more memory were available.
+2023-05-29 21:57:17.800799: W tensorflow/core/common_runtime/bfc_allocator.cc:290] Allocator (GPU_0_bfc) ran out of memory trying to allocate 2.15GiB with freed_by_count=0. The caller indicates that this is not a failure, but this may mean that there could be performance gains if more memory were available.
+2023-05-29 21:57:17.817204: W tensorflow/core/common_runtime/bfc_allocator.cc:290] Allocator (GPU_0_bfc) ran out of memory trying to allocate 1.08GiB with freed_by_count=0. The caller indicates that this is not a failure, but this may mean that there could be performance gains if more memory were available.
+2023-05-29 21:57:17.938722: W tensorflow/core/common_runtime/bfc_allocator.cc:290] Allocator (GPU_0_bfc) ran out of memory trying to allocate 1.08GiB with freed_by_count=0. The caller indicates that this is not a failure, but this may mean that there could be performance gains if more memory were available.
+22468/22468 [==============================] - 832s 37ms/step - loss: 1.4095 - accuracy: 0.6410 - val_loss: 1.0632 - val_accuracy: 0.6901
+Epoch 2/10
+22468/22468 [==============================] - 825s 37ms/step - loss: 1.3140 - accuracy: 0.6523 - val_loss: 1.1287 - val_accuracy: 0.6483
+Epoch 3/10
+22468/22468 [==============================] - 826s 37ms/step - loss: 1.3027 - accuracy: 0.6507 - val_loss: 1.2620 - val_accuracy: 0.7006
+Epoch 4/10
+22468/22468 [==============================] - 825s 37ms/step - loss: 1.3093 - accuracy: 0.6515 - val_loss: 1.2357 - val_accuracy: 0.6940
+Epoch 5/10
+22468/22468 [==============================] - 825s 37ms/step - loss: 1.2966 - accuracy: 0.6514 - val_loss: 1.1351 - val_accuracy: 0.6712
+Epoch 6/10
+22468/22468 [==============================] - 825s 37ms/step - loss: 1.3127 - accuracy: 0.6555 - val_loss: 1.3446 - val_accuracy: 0.7230
+Epoch 7/10
+22468/22468 [==============================] - 825s 37ms/step - loss: 1.3082 - accuracy: 0.6528 - val_loss: 1.2433 - val_accuracy: 0.7252
+Epoch 8/10
+22468/22468 [==============================] - 826s 37ms/step - loss: 1.3149 - accuracy: 0.6531 - val_loss: 1.2394 - val_accuracy: 0.6461
+Epoch 9/10
+22468/22468 [==============================] - 828s 37ms/step - loss: 1.3118 - accuracy: 0.6540 - val_loss: 1.1934 - val_accuracy: 0.6719
+Epoch 10/10
+22468/22468 [==============================] - 832s 37ms/step - loss: 1.3133 - accuracy: 0.6567 - val_loss: 1.2460 - val_accuracy: 0.6842
+2023-05-30 00:15:01.235607: W tensorflow/core/common_runtime/bfc_allocator.cc:290] Allocator (GPU_0_bfc) ran out of memory trying to allocate 1.02GiB with freed_by_count=0. The caller indicates that this is not a failure, but this may mean that there could be performance gains if more memory were available.
+220/220 [==============================] - 64s 279ms/step - loss: 1.2057 - accuracy: 0.6907
