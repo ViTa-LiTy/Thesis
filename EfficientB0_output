@@ -1,0 +1,47 @@
+PS D:\Study\Thesis\Code> & C:/Users/shiva/.conda/envs/tf/python.exe d:/Study/Thesis/Code/EfficientNET.py
+2023-05-30 14:24:43.185802: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX AVX2
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-05-30 14:24:45.261217: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1616] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 2777 MB memory:  -> device: 0, name: NVIDIA GeForce GTX 1050 Ti, pci bus id: 0000:01:00.0, compute capability: 6.1
+Model: "sequential"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #
+=================================================================
+ efficientnetb0 (Functional)  (None, 4, 4, 1280)       4049571
+
+ global_average_pooling2d (G  (None, 1280)             0
+ lobalAveragePooling2D)
+
+ dense (Dense)               (None, 5)                 6405
+
+=================================================================
+Total params: 4,055,976
+Trainable params: 6,405
+Non-trainable params: 4,049,571
+_________________________________________________________________
+2023-05-30 14:24:47.991877: W tensorflow/core/framework/cpu_allocator_impl.cc:82] Allocation of 1104347136 exceeds 10% of free system memory.
+Epoch 1/10
+2023-05-30 14:24:55.112745: I tensorflow/stream_executor/cuda/cuda_dnn.cc:384] Loaded cuDNN version 8600
+22468/22468 [==============================] - 518s 22ms/step - loss: 0.8802 - accuracy: 0.7190 - val_loss: 0.9130 - val_accuracy: 0.6419
+Epoch 2/10
+22468/22468 [==============================] - 477s 21ms/step - loss: 0.8437 - accuracy: 0.7231 - val_loss: 0.8244 - val_accuracy: 0.7465
+Epoch 3/10
+22468/22468 [==============================] - 482s 21ms/step - loss: 0.8323 - accuracy: 0.7258 - val_loss: 0.8419 - val_accuracy: 0.7330
+Epoch 4/10
+22468/22468 [==============================] - 484s 22ms/step - loss: 0.8282 - accuracy: 0.7242 - val_loss: 0.8304 - val_accuracy: 0.7380
+Epoch 5/10
+22468/22468 [==============================] - 478s 21ms/step - loss: 0.8221 - accuracy: 0.7300 - val_loss: 0.8151 - val_accuracy: 0.7410
+Epoch 6/10
+22468/22468 [==============================] - 483s 22ms/step - loss: 0.8131 - accuracy: 0.7279 - val_loss: 0.8614 - val_accuracy: 0.6972
+Epoch 7/10
+22468/22468 [==============================] - 480s 21ms/step - loss: 0.8096 - accuracy: 0.7327 - val_loss: 0.8505 - val_accuracy: 0.7143
+Epoch 8/10
+22468/22468 [==============================] - 483s 21ms/step - loss: 0.8103 - accuracy: 0.7301 - val_loss: 0.8126 - val_accuracy: 0.7378
+Epoch 9/10
+22468/22468 [==============================] - 482s 21ms/step - loss: 0.8091 - accuracy: 0.7310 - val_loss: 0.8370 - val_accuracy: 0.7403
+Epoch 10/10
+22468/22468 [==============================] - 484s 22ms/step - loss: 0.8125 - accuracy: 0.7288 - val_loss: 0.8078 - val_accuracy: 0.7387
+2023-05-30 15:45:43.931933: W tensorflow/core/common_runtime/bfc_allocator.cc:290] Allocator (GPU_0_bfc) ran out of memory trying to allocate 908.41MiB with freed_by_count=0. The caller indicates that this is not a failure, but this may mean that there could be performance gains if more memory were available.
+2023-05-30 15:45:43.995528: W tensorflow/core/common_runtime/bfc_allocator.cc:290] Allocator (GPU_0_bfc) ran out of memory trying to allocate 940.06MiB with freed_by_count=0. The caller indicates that this is not a failure, but this may mean that there could be performance gains if more memory were available.
+219/220 [============================>.] - ETA: 0s - loss: 0.7867 - accuracy: 0.74692023-05-30 15:46:24.514991: W tensorflow/core/common_runtime/bfc_allocator.cc:290] Allocator (GPU_0_bfc) ran out of memory trying to allocate 862.84MiB with freed_by_count=0. The caller indicates that this is not a failure, but this may mean that there could be performance gains if more memory were available.
+2023-05-30 15:46:24.575267: W tensorflow/core/common_runtime/bfc_allocator.cc:290] Allocator (GPU_0_bfc) ran out of memory trying to allocate 927.41MiB with freed_by_count=0. The caller indicates that this is not a failure, but this may mean that there could be performance gains if more memory were available.
+220/220 [==============================] - 44s 185ms/step - loss: 0.7859 - accuracy: 0.7471
